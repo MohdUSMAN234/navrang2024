@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College News</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.news-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#news-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.news-item {
+  margin-bottom: 20px;
+}
+
+.news-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.news-content {
+  font-size: 14px;
+}
+
+</style>
+<body>
+  <div class="news-container">
+    <h2>Quick News</h2>
+    <ul id="news-list"></ul>
+  </div>
+
+  <script src="script.js">
+    document.addEventListener("DOMContentLoaded", function() {
+  const newsList = document.getElementById('news-list');
+
+  // Dummy data for demonstration
+  const dummyNews = [
+    { title: "Exciting Event Coming Up!", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    { title: "New Scholarship Opportunities", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    { title: "Faculty Announcement", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+  ];
+
+  // Function to display news articles
+  function displayNews() {
+    newsList.innerHTML = '';
+    dummyNews.forEach(news => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('news-item');
+      listItem.innerHTML = `
+        <h3 class="news-title">${news.title}</h3>
+        <p class="news-content">${news.content}</p>
+      `;
+      newsList.appendChild(listItem);
+    });
+  }
+
+  // Display news articles initially
+  displayNews();
+});
+
+  </script>
+</body>
+</html>

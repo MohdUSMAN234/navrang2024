@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>President's Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background: linear-gradient(to right, #333, #444);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .content:hover {
+            transform: translateY(-5px);
+        }
+
+        .image {
+            flex: 1;
+            padding: 20px;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease forwards;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .signature {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Animation */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                align-items: flex-start; /* Adjust alignment */
+            }
+            .image {
+                flex: 1;
+                margin-bottom: 20px; /* Add margin to separate from content */
+            }
+            .content {
+                flex: 1;
+            }
+        }
+        .home-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffcc00;
+            color: #222;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 9999;
+        }
+
+        .home-button:hover {
+            background-color: #fff;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>President's Message</h1>
+            <p>
+                It has been my honor to host the vibrant, special, and enthusiastic cultural events of The Navrang Club,
+                PSIT – “Show Your Talent” and “The Navrang Beats” in IGNITIA 2k24...
+            </p>
+           <p> It has been my honor to host the vibrant, special, and enthusiastic cultural events of The Navrang Club,
+            PSIT – “Show Your Talent” and “The Navrang Beats” in IGNITIA 2k24. I recall my journey as a
+            complete fresher in PSIT – full of dreams and energy, eager to explore different aspects of college life,
+            develop strong networks, and hone my interpersonal skills alongside my academic studies. With a passion
+            for music, I used to play guitar in my leisure time. Then, I was introduced to the amazing cultural club of
+            our college – The Navrang Club. I was completely mesmerized and driven towards the events the club
+            had planned at the time and was keen to be a part of them.</p>
+
+
+            <p>Vaibhavi Didi (Our Ex-President ) was leading the Club at that time. I was truly inspired by the way
+            she managed and planned out various and energetic events for all of us, making sure there were no
+            inconveniences. She truly motivated me. I approached her, asking to be part of the club. She suggested I
+            serve as a Club Volunteer and explained the process of joining something extraordinary.
+            That day, a complete fresher, and today, I stand before you all as the President of The Navrang Club,
+            PSIT – it has been quite a journey so far and a complete honor to me. It has been a roller-coaster ride.
+            There were the initial days, when being part of and managing events seemed difficult, and also the days
+            where post-event, we used to dance together to our favorite beats! Vaibhavi Didi has been a complete
+            source of motivation for me! (Thank you so much Didi for being you! )</p>
+
+
+           <p> Mukesh Sir (The Navrang Club PSIT's Club Ambassador) was our primary source of guidance, advice,
+            and support whenever we needed it. Without his vision for the club, it all looked impractical. Muskan, the
+            Vice President of the club, was also a big support in my journey, helping me make the dream come true!
+            My team - Akriti (Club Secretary), Ojasvee (Singing Head), Nishant (Social Media Head), Shashank
+            (Treasurer), Rachit (Promotional Head), Rishi (Graphics Head), Vijay (Creative Head), and Usman
+            (Technical Head) - was my biggest strength throughout my journey. The Navrang Club will always hold a
+            special place in my heart!</p>
+
+
+            <p>This year, our annual techno-cultural fest ‘IGNITIA 2k24’ had the theme “Adhvanik,” presenting the
+            memories, the moments of joy we shared going down memory lane, and the spark for the future! The
+            Navrang Club, PSIT, along with our partner The Navrang Club, PSIT-CHE, decided to plan two events to
+            engage the crowd and ensured an amazing time in IGNITIA! “Show Your Talent” provided a platform for
+            students to showcase their incredible talents and rule the stage! “The Navrang Beats” offered a platform
+            to present a theme-based performance and win the cheer of the audience. We are grateful for the energetic
+            response from the PSITians, which made the events successful.</p>
+
+           <p> Signing Off!
+            Prakhar Srivastava
+            President, The Navrang Club PSIT
+        </p>
+
+            <p class="signature">Follow me on Twitter: @prakharsri03</p>
+        </div>
+        <div class="image">
+            <img src="img/blog2.png" alt="President Prakhar Srivastava">
+    </div>
+    <button class="home-button" onclick="goToHomePage()">Home</button>
+
+    <script>
+        function goToHomePage() {
+            // Replace the URL with the actual home page URL
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>

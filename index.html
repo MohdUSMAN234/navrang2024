@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Navang Club</title>
+  <link rel="stylesheet" href="navrang.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Oleo+Script&family=Roboto&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Lobster&family=Oleo+Script&family=Roboto&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="navrang.js">
+  <link rel="stylesheet" href="core.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+  
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="/img/nav55.png" alt="Club Logo">
+      </div>
+      <nav class="navbar">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- <div class="hamburger">
+          
+          
+        </div>  -->
+      </nav>
+
+      <div class="cta">
+        <a href="https://chat.whatsapp.com/KKi8mCWJQRNJ5R9DE47NQM" class="button" target="_blank">Join Now</a>
+        <a href="https://www.instagram.com/navrang.psit/" class="fa fa-instagram" target="_blank"></a>
+        <a href="https://www.linkedin.com/company/navrang-club-psit/" class="fa fa-linkedin" target="_blank"></a>
+
+        <!-- </div>
+      <a href="https://www.facebook.com/NAVRANG.PSIT/" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-youtube"></a> -->
+      </div>
+
+  </header>
+  <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="none" d="M0 0h24v24H0z"/>
+        <path d="M12 2L0 14h8v8h8V14h8z"/>
+    </svg>
+</button>
+
+<script>
+  // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrollToTopBtn").style.display = "block";
+    } else {
+        document.getElementById("scrollToTopBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+</script>
+
+  <section class="video-section">
+    <div class="video-container">
+      <video autoplay muted>
+        <source src="/video/video 2.mp4" type="video/mp4">
+      </video>
+      <!-- <audio id="background-music" loop>
+        <source src="img/22232.mp3" type="audio/mp3">
+      </audio> -->
+    </div>
+  </section>
+  <section class="video-section">
+    <div class="video-container">
+      <video autoplay muted id="video">
+        <source src="video/video3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const video = document.getElementById('video');
+      let timeout;
+
+      // Pause the video initially
+      video.pause();
+
+      // Function to play the video with a 2-second delay
+      function playVideoWithDelay() {
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+          video.play();
+        }, 600); // 2-second delay
+      }
+
+      // Event listeners for mouse enter and leave
+      video.parentElement.addEventListener('mouseenter', playVideoWithDelay);
+      video.parentElement.addEventListener('mouseleave', function () {
+        clearTimeout(timeout);
+      });
+    });
+  </script>
+
+
+  <section class="video-section">
+    <div class="video-container">
+      <video autoplay muted>
+        <source src="video/video4.mp4" type="video/mp4">
+      </video>
+      <!-- <audio id="background-music" loop>
+        <source src="img/22232.mp3" type="audio/mp3">
+      </audio> -->
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="video-container">
+      <video autoplay loop muted>
+        <source src="video/video6.mp4" type="video/mp4">
+      </video>
+      <!-- <audio id="background-music" loop>
+        <source src="img/22232.mp3" type="audio/mp3">
+      </audio> -->
+    </div>
+  </section>
+
+  <section class="core-club" class="core-club dark-theme">
+    <h2 class="colorr">Core Club Committee Members</h2>
+    <div class="committee-members">
+      <!-- Member 1 -->
+      <div class="member" id="member1">
+        <img src="img/member5.jpeg" alt="Member 1"
+          onclick="showMemberInfo('modall-member1','Mukesh Dubey', 'Club Ambassador','Bio for Mukesh Dubey', 'img/member5.jpeg')">
+        <h3>Mukesh Dubey</h3>
+        <p>Club Ambassador</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <!-- Add more social media icons as needed -->
+        </div>
+
+      </div>
+
+      <div class="member">
+        <img src="img/member11.png" alt="Member 8"
+          onclick="showMemberInfo('modall-member8','Vaibhavi Dubey', 'Ex-President','img/member11.png')">
+        <h3>Vaibhavi Dubey</h3>
+        <p>Ex-President</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <!-- Add more social media icons as needed -->
+        </div>
+      </div>
+
+
+
+      <div class="member">
+        <img src="img/member4.jpg" alt="Member 2"
+          onclick="showMemberInfo('modall-member2','Prakhar Srivastava', 'President','img/member4.jpg')">
+        <h3>Prakhar Srivastava</h3>
+        <p>President</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <!-- Add more social media icons as needed -->
+        </div>
+      </div>
+      <div class="member">
+        <img src="img/member6.jpg" alt="Member 3"
+          onclick="showMemberInfo('modall-member3','Muskan Sinha', 'Vice President')">
+        <h3>Muskan Sinha</h3>
+        <p>Vice President</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <!-- Add more social media icons as needed -->
+        </div>
+      </div>
+      <div class="member">
+        <img src="img/member7.jpg" alt="Member 4"
+          onclick="showMemberInfo('modall-member4','Ojasvee Gupta', 'Singing Head')">
+        <h3>Ojasvee Gupta</h3>
+        <p>Singing Head</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <!-- Add more social media icons as needed -->
+        </div>
+      </div>
+      <div class="member">
+        <img src="img/member8.jpg" alt="Member 5"
+          onclick="showMemberInfo('modall-member5','Nishant Srivastava', 'Social Media Head')">
+        <h3>Nishant Srivastava</h3>
+        <p>Social Media Head</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <!-- Add more social media icons as needed -->
+        </div>
+      </div>
+      <div class="member">
+        <img src="img/member9.png" alt="Member 6"
+          onclick="showMemberInfo('modall-member6','Mohd Usman', 'Technical Head')">
+        <h3>Mohd Usman</h3>
+        <p>Technical Head</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <!-- Add more social media icons as needed -->
+        </div>
+      </div>
+      <div class="member">
+        <img src="img/member10.jpg" alt="Member 7"
+          onclick="showMemberInfo('modall-member7','Akriti Sohane', 'Secretary')">
+        <h3>Akriti Sohane</h3>
+        <p>Secretary</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <!-- Add more social media icons as needed -->
+        </div>
+      </div>
+
+      <div class="member">
+        <img src="img/member15.png" alt="Member 9"
+          onclick="showMemberInfo('modall-member9','Mukesh Dubey', 'Club Ambassador')">
+        <h3>Vijay Kumar Verma</h3>
+        <p>Creative Head</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <!-- Add more social media icons as needed -->
+        </div>
+      </div>
+      <div class="member">
+        <img src="img/member14.jpg" alt="Member 10"
+          onclick="showMemberInfo('modall-member10','Mukesh Dubey', 'Club Ambassador','Bio for Mukesh Dubey')">
+        <h3>Rachit Shukla</h3>
+        <p>Promotional Head</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <!-- Add more social media icons as needed -->
+        </div>
+      </div>
+      <div class="member">
+        <img id="modal-image" src="img/member13.jpg" alt="Member 10"
+          onclick="showMemberInfo('Mukesh Dubey', 'Club Ambassador','Bio for Mukesh Dubey')">
+        <h3>Rishi Yadav</h3>
+        <p>Graphic Head</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+          <!-- Add more social media icons as needed -->
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Member 2 -->
+    <!-- Repeat for all 14 members -->
+    <!-- Member 14 -->
+    </div>
+  </section>
+
+
+
+  <script>
+    // Use window.onload to ensure all resources are loaded before playing audio
+    window.onload = function () {
+      // Get the audio element
+      var audio = document.getElementById("background-music");
+      // Play the audio
+      audio.play();
+    };
+  </script>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="glow">Welcome to The Navrang Club</h1>
+      <p>Join us for exciting performances, workshops, and classes!</p>
+      <a href="comingsoon.html" target="_blank" class="cta-btn">Learn More</a>
+    </div>
+  </section>
+
+  <section class="about-us">
+    <div class="container">
+      <h2>Why Navrang Matters</h2>
+      <div class="about-content">
+        <div class="graphic">
+          <!-- <img src="your-clipart-image.svg" alt="Navrang Clipart"> -->
+        </div>
+        <div class="text-content">
+          <p>Make Your Mark: Navrang is not just a club; it's a canvas for you to paint your unique cultural story at
+            PSIT.</p>
+          <p>Be Part of Something Bigger: By joining Navrang, you contribute to a legacy of creativity and leave a
+            lasting impact on campus culture.</p>
+          <p>Fun and Friendships: Expect not just events but a community of like-minded individuals who share a passion
+            for culture, laughter, and collective growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Optional: Add animations or interactivity using JavaScript
+    // Example: Fade in the section when it comes into view
+    document.addEventListener('DOMContentLoaded', function () {
+      var aboutSection = document.querySelector('.about-us');
+      var options = {
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+      var observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fadeIn');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+      observer.observe(aboutSection);
+    });
+
+  </script>
+
+  <!-- <section id="classes">
+    <div class="container">
+      <h2>Classes</h2>
+      <div class="class-card">
+        <h3>Contemporary Dance</h3>
+        <p>Monday & Wednesday<br>6:00 PM - 8:00 PM</p>
+        <p>Join us to explore the fluidity and expression of contemporary dance.</p>
+      </div>
+      <div class="class-card">
+        <h3>Hip Hop Dance</h3>
+        <p>Tuesday & Thursday<br>7:00 PM - 9:00 PM</p>
+        <p>Get ready to groove and master the latest hip hop moves with our experienced instructors.</p>
+      </div>
+      
+    </div>
+  </section> -->
+
+
+  <section id="events">
+    <div class="container">
+      <h2>Upcoming Events</h2>
+      <div class="event">
+        <div class="event-details">
+          <h3>Danzeal</h3>
+          <p>Date: April 29, 2024</p>
+          <p>Time: 5:30 PM - 7:00 PM</p>
+          <p>Location: J-37 Seminar Hall</p>
+          <p>Description: Join us for an evening of dazzling performances featuring our talented dancers and singers!
+          </p>
+          <a href="https://forms.gle/ePtTBu18EdiPmdgK7" class="btn" target="_blank">Register Now</a>
+        </div>
+        <div class="event-image">
+          <img src="img/danzeal.jpg" alt="Spring Showcase">
+        </div>
+      </div>
+      <!-- Add more events as needed -->
+    </div>
+  </section>
+  <section class="animation-section">
+    <div class="animation-content">
+      <h2>Gallery</h2>
+    </div>
+    <div class="animation-background"></div>
+  </section>
+  <section id="gallery">
+    <div class="container">
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="img/1234.png" alt="Gallery Image 1">
+        </div>
+        <div class="gallery-item">
+          <img src="img/999.png" alt="Gallery Image 2">
+        </div>
+        <div class="gallery-item">
+          <img src="img/1301.jpg" alt="Gallery Image 3">
+        </div>
+        <div class="gallery-item">
+          <img src="img/1302.jpg" alt="Gallery Image 4">
+        </div>
+        <div class="galleryy">
+          <div class="gallery-wrapper">
+            <img src="img/1111@.png" alt="Image 1">
+            <img src="img/1212.png" alt="Image 2">
+            <img src="img/1302.jpg" alt="Image 3">
+            <img src="img/999.png" alt="Image 3">
+            <img src="img/22.jpeg" alt="Image 3">
+            <img src="img/243.png" alt="Image 3">
+            <img src="img/1302.jpg" alt="Image 3">
+            <img src="img/1302.jpg" alt="Image 3">
+            <img src="img/1302.jpg" alt="Image 3">
+            <!-- Add more images as needed -->
+          </div>
+          <button id="prevBtn">Previous</button>
+          <button id="nextBtn">Next</button>
+        </div>
+        <script src="gallery.js"></script>
+      </div>
+
+
+      <!-- <div class="card">
+        <img src="img/us.jpg" alt="Mohd Usman">
+        <h1>Mohd Usman</h1>
+        <p class="title">Design by. </p>
+        <button onclick="openPopup()">View Profile</button>
+      </div>
+    
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <img src="img/us.jpg" alt="John Doe">
+          <h1>Mohd Usman</h1>
+          <p class="title">Web Developer</p>
+          <p>Student of It-B. Work and develped many such project. Active Member of the Navrang Club.</p>
+          <a href="https://www.instagram.com/imusmann_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="fa fa-instagram">Do Follow</a>
+        </div>
+      </div> -->
+
+      <script src="pop.js"></script>
+  </section>
+
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+  <section class="animation-section">
+    <div class="animation-content">
+      <h2>Blog</h2>
+    </div>
+    <div class="animation-background"></div>
+  </section>
+  <section id="blog">
+    <div class="container">
+      <div class="blog-posts">
+        <!-- Each blog post should be enclosed within its own <div class="blog-post"> container -->
+        <div class="blog-post">
+          <img src="img/blog2.png" alt="Blog Post Image">
+          <div class="blog-content">
+            <h3>President ending speech.</h3>
+            <p class="date">Posted on April 5, 2024</p>
+            <p class="excerpt">Check out our latest blog post featuring the top 10 dance moves that every dancer should
+              master!</p>
+            <a href="blog.html" class="btn" target="_blank">Read More</a>
+          </div>
+        </div>
+
+        <div class="blog-post">
+          <img src="img/blog3.png" alt="Blog Post Image">
+          <div class="blog-content">
+            <h3>Judges gathered for praising the winning participant</h3>
+            <p class="date">Posted on March 20, 2024</p>
+            <p class="excerpt">Discover 5 effective vocal exercises that will help you enhance your singing voice and
+              performance!</p>
+            <a href="blog-post2.html" class="btn" target="_blank">Read More</a>
+          </div>
+        </div>
+
+        <!-- Add more blog posts as needed -->
+        <!-- Ensure that each blog post follows the same structure as the ones above -->
+        <!-- Example of adding another blog post -->
+        <!-- <div class="blog-post">
+          <img src="" alt="Blog Post Image">
+          <div class="blog-content">
+            <h3>Your New Blog Title Here</h3>
+            <p class="date">Posted on April 25, 2024</p>
+            <p class="excerpt">Brief description of your new blog post goes here.</p>
+            <a href="blog-post3.html" class="btn" target="_blank">Read More</a>
+          </div> -->
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+
+  <section class="animation-section">
+    <div class="animation-content">
+      <h2>Testimonials</h2>
+    </div>
+    <div class="animation-background"></div>
+  </section>
+  <section id="testimonials">
+    <div class="testimonials-container">
+      <div class="testimonial">
+        <img src="img/1111@.png" alt="Testimonial Image">
+        <div class="testimonial-content">
+          <p>LinkedIn might say you'll find me navigating the professional landscape, but as the President of The
+            Navrang Club, I am at the center of a community that revels in creativity. We weave stories through dance,
+            ignite emotions with music, and bring to life a world of imagination. It's all about connecting with this
+            incredible bunch of creative souls and fostering a space where artistic expression flows freely. Basically,
+            it's all about the good vibes! The Navrang Club is not just a group, but a space where passions thrive.</p>
+          <cite>President -Prakhar</cite>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="img/member6.jpg" alt="Testimonial Image">
+        <div class="testimonial-content">
+          <p>the most remarkable aspects of the club is its ability to bridge divides and cultivate understanding among
+            members of the college community. By showcasing the richness of various cultures, languages, and customs,
+            the club promotes empathy, respect, and appreciation for diversity. It provides a platform for students to
+            share their heritage, stories, and talents, fostering a sense of belonging and unity. </p>
+          <cite>Vice- President-Muskan </cite>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="img/member8.jpg" alt="Testimonial Image">
+        <div class="testimonial-content">
+          <p>This is a platform where students get to unleash their hidden talents and discover their passions and
+            strengths. It's all about helping them find what truly excites them and where their natural abilities lie.
+          </p>
+          <cite>Social Media Head -Nishant</cite>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="img/member11.png" alt="Testimonial Image">
+        <div class="testimonial-content">
+          <p>As President of The Navrang Club, I believed it was a vibrant cultural collage of diverse talents and
+            passions. Our club served as a creative hub, fostering unity through a kaleidoscope of artistic expression,
+            from dance and music to literature and cuisine. We celebrated the rich tapestry of cultures within our
+            community, promoting inclusivity and understanding. Through our events and initiatives, we aimed to ignite
+            curiosity, spark dialogue, and cultivate a sense of belonging among our members. The Navrang Club wasn't
+            just a club; it was a colorful mosaic where every hue contributed to the beauty of our collective
+            experience.</p>
+          <cite>Ex-President-Vaibhavi</cite>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="img/member5.jpeg" alt="Testimonial Image">
+        <div class="testimonial-content">
+          <p>The Navrang Club is a consistently fostering a vibrant environment that celebrates creativity and cultural
+            exchange through a diverse range of activities. This dynamic club allows students to explore their artistic
+            talents, build strong connections with like-minded peers, and contribute to a rich tapestry of cultural
+            appreciation on campus.</p>
+          <cite>Club Ambassador -Mr Mukesh Dubey</cite>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="img/member9.png" alt="Testimonial Image">
+        <div class="testimonial-content">
+          <p>The Navrang club is like a colorful mix of talents and culture. We all bring uniqueness to the table,
+            making our club more vibrant and exciting. It's a fun place where we celebrate our differences and come
+            together to have good time.</p>
+          <cite>Technical Head-Mohd Usman</cite>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="img/member10.jpg" alt="Testimonial Image">
+        <div class="testimonial-content">
+          <p>Navrang Club is a place where you can organize yourself to learn more about India’s Cultural Heritage. For
+            teachers it is a tool to create awareness, develop respect and appreciation towards Indian arts. And also
+            motivate students to undertake action-projects to conserve Indian Cultural traditions.</p>
+          <cite>Secretary-Akriti</cite>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="img/member7.jpg" alt="Testimonial Image">
+        <div class="testimonial-content">
+          <p>The Navrang Club is the only club for cultural festives in our college. The club provides the opportunity
+            to students to showcase their inner talent on stage infront of huge audience in any cultural events (such as
+            dancing, singing, art, open mic, dramas,etc.) Being a singing head, I personally love singing and this club
+            provides me the place to do so. This club really has my heart.</p>
+          <cite>Singing Head-Ojasvee</cite>
+        </div>
+      </div>
+      <!-- Add more testimonials as needed -->
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+  <div id="modall-member1" class="modall modall-right">
+    <div class="modall-content">
+      <span class="close" onclick="hideModal('modall-member1')">&times;</span>
+      <h2 id="modall-name-member1">Mukesh Dubey</h2>
+      <p id="modall-role-member1">Club Ambassador</p>
+
+      <div class="social-iconss">
+        <h3 class="social-heading">Connect with us</h3>
+        <div class="social-linkss">
+          <a href="https://www.instagram.com/m_dubey11/" class="social-linkk instagram" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/mukesh-dubey-75564a34?trk=contact-info" class="social-linkk linkedin"
+            target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <h3 class="social-heading">About The Navrang</h3>
+      <p id="modall-bio-member1">The Navrang Club is consistently fostering a vibrant environment that celebrates
+        creativity and cultural exchange through a diverse range of activities. This dynamic club allows students to
+        explore their artistic talents, build strong connections with like-minded peers, and contribute to a rich
+        tapestry of cultural appreciation on campus.</p>
+
+    </div>
+  </div>
+
+  <div class="background-overlay" id="backgroundOverlay"></div>
+
+  <!-- Container for enlarged image -->
+  <div class="enlarged-image-container" id="enlargedImageContainer">
+    <span class="close-cross" onclick="closeModalAndEnlarged()">&times;</span>
+    <img src="" alt="Enlarged Image" class="enlarged-image" id="enlargedImage">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var members = document.querySelectorAll('.core-club .member img');
+
+      members.forEach(function (member) {
+        member.addEventListener('click', function () {
+          var imageSrc = this.src;
+          showEnlargedImage(imageSrc);
+        });
+      });
+
+      // Function to show enlarged image
+      function showEnlargedImage(imageSrc) {
+        var backgroundOverlay = document.getElementById('backgroundOverlay');
+        var enlargedImageContainer = document.getElementById('enlargedImageContainer');
+        var enlargedImage = document.getElementById('enlargedImage');
+
+        enlargedImage.src = imageSrc;
+        backgroundOverlay.style.display = 'block';
+        enlargedImageContainer.style.display = 'block';
+      }
+
+      // Close the enlarged image container when clicking outside of it
+      window.onclick = function (event) {
+        var backgroundOverlay = document.getElementById('backgroundOverlay');
+        var enlargedImageContainer = document.getElementById('enlargedImageContainer');
+        if (event.target == backgroundOverlay || event.target == enlargedImageContainer) {
+          backgroundOverlay.style.display = 'none';
+          enlargedImageContainer.style.display = 'none';
+        }
+      };
+    });
+
+  </script>
+
+
+
+  <div id="modall-member2" class="modall modall-right">
+    <div class="modall-content">
+      <span class="close" onclick="hideModal('modall-member2')">&times;</span>
+      <h2 id="modall-name-member2">Prakhar Srivastava</h2>
+      <p id="modall-role-member2">President</p>
+      <div class="social-iconss">
+        <h3 class="social-heading">Connect with us</h3>
+        <!-- <div class="social-links">
+        <a id="modall-instagram-member2" class="fa fa-instagram social-link"
+          href="https://www.instagram.com/_srivastavaprakhar/">Instagram</a>
+        <a id="modall-linkedin-member2" class="fa fa-linkedin social-link"
+          href="https://www.linkedin.com/in/prakharwork12/">LinkedIn</a>
+        <a href="https://twitter.com/prakharsri03" class="fa fa-twitter social-link">Twitter</a>
+        <a id="modall-github-member2" class="fa fa-github social-link"
+          href="https://github.com/srivastavaprakhar01">GitHub</a>
+      </div> -->
+        <div class="social-linkss">
+          <a href="https://www.instagram.com/_srivastavaprakhar/" class="social-linkk instagram" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/prakharwork12/" class="social-linkk linkedin" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://twitter.com/prakharsri03" class="social-linkk linkedin" target="_blank">
+            <i class="fab fa-twitter"></i> Twitter
+          </a>
+          <a href="https://github.com/srivastavaprakhar01" class="social-linkk linkedin" target="_blank">
+            <i class="fab fa-github">Github</i>
+          </a>
+        </div>
+      </div>
+      <h3 class="social-heading">About The Navrang</h3>
+      <p id="modall-bio-member2">
+        LinkedIn might say you'll find me navigating the professional landscape, but as the President of The Navrang
+        Club, I am at the center of a community that revels in creativity. We weave stories through dance, ignite
+        emotions with music, and bring to life a world of imagination. It's all about connecting with this incredible
+        bunch of creative souls and fostering a space where artistic expression flows freely. Basically, it's all about
+        the good vibes! The Navrang Club is not just a group, but a space where passions thrive.
+      </p>
+    </div>
+  </div>
+
+
+  <div id="modall-member3" class="modall modall-right">
+    <div class="modall-content">
+      <span class="close" onclick="hideModal('modall-member3')">&times;</span>
+      <h2 id="modall-name-member3">Muskan Sinha</h2>
+      <p id="modall-role-member3">Vice President</p>
+      <h3 class="social-heading">Connect with us</h3>
+      <a id="modall-instagram-member3" class="fa fa-instagram social-link"
+        href="https://www.instagram.com/muskaaansinhaa/">Intagram</a>
+      <a id="modall-linkedin-member3" class="fa fa-linkedin social-link"
+        href="https://www.linkedin.com/in/muskan-sinha-31b95325a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSKGEDhfGTxGqj4mDsbhoaA%3D%3D">Linkedin</a>
+      <!-- <div class="hand-animation"></div> -->
+      <h3 class="social-heading">About The Navrang</h3>
+      <p id="modall-bio-member3">
+        LinkedIn might say you'll find me navigating the professional landscape, but as the President of The Navrang
+        Club, I am at the center of a community that revels in creativity. We weave stories through dance, ignite
+        emotions with music, and bring to life a world of imagination. It's all about connecting with this incredible
+        bunch of creative souls and fostering a space where artistic expression flows freely. Basically, it's all about
+        the good vibes! The Navrang Club is not just a group, but a space where passions thrive.
+      </p>
+    </div>
+  </div>
+
+  <div id="modall-member4" class="modall modall-right">
+    <div class="modall-content">
+      <span class="close" onclick="hideModal('modall-member4')">&times;</span>
+      <h2 id="modall-name-member4">Ojasvee Gupta</h2>
+      <p id="modall-role-member4">Singing Head</p>
+      <h3 class="social-heading">Connect with us</h3>
+      <a id="modall-instagram-member4" class="fa fa-instagram social-link"
+        href="https://www.instagram.com/ojasvee.10?igsh=MTFpd3duYnd6dHV4bA==" target="_blank">Intagram</a>
+      <a id="modall-linkedin-member4" class="fa fa-linkedin social-link"
+        href="https://www.linkedin.com/in/ojasvee-gupta-830952255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linkedin</a>
+      <!-- <div class="hand-animation"></div> -->
+      <h3 class="social-heading">About The Navrang</h3>
+      <p id="modall-bio-member4">
+        The Navrang Club is the only club for cultural festives in our college. The club provides the opportunity to
+        students to showcase their inner talent on stage infront of huge audience in any cultural events (such as
+        dancing, singing, art, open mic, dramas,etc.) Being a singing head, I personally love singing and this club
+        provides me the place to do so. This club really has my heart.
+      </p>
+    </div>
+  </div>
+
+  <div id="modall-member5" class="modall modall-right">
+    <div class="modall-content">
+      <span class="close" onclick="hideModal('modall-member5')">&times;</span>
+      <h2 id="modall-name-member5">Nishant Srivastava</h2>
+      <p id="modall-role-member5">Social Media Head</p>
+      <h3 class="social-heading">Connect with us</h3>
+      <a id="modall-instagram-member5" class="fa fa-instagram social-link"
+        href="https://www.instagram.com/kuchbhinishant?igsh=NGp2ZGFrMXV1MjF5">Intagram</a>
+      <a id="modall-linkedin-member4" class="fa fa-linkedin social-link"
+        href="https://www.linkedin.com/in/nishant-srivastava">Linkedin</a>
+      <!-- <div class="hand-animation"></div> -->
+      <h3 class="social-heading">About The Navrang</h3>
+      <p id="modall-bio-member4">
+        This is a platform where students get to unleash their hidden talents and discover their passions and strengths.
+        It's all about helping them find what truly excites them and where their natural abilities lie.
+      </p>
+    </div>
+  </div>
+
+  <div id="modall-member6" class="modall modall-right">
+    <div class="modall-content">
+      <span class="close" onclick="hideModal('modall-member6')">&times;</span>
+      <h2 id="modall-name-member6">Mohd Usman</h2>
+      <p id="modall-role-member6">Technical Head</p>
+      <h3 class="social-heading">Connect with us</h3>
+      <a id="modall-instagram-member4" class="fa fa-instagram social-link"
+        href="https://www.instagram.com/imusmann_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Intagram</a>
+      <a id="modall-linkedin-member4" class="fa fa-linkedin social-link"
+        href="https://www.linkedin.com/in/mohd-usman-32b411303">Linkedin</a>
+      <!-- <div class="hand-animation"></div> -->
+      <h3 class="social-heading">About The Navrang</h3>
+      <p id="modall-bio-member6">
+        The Navrang club is like a colorful mix of talents and culture. We all bring uniqueness to the table, making our
+        club more vibrant and exciting. It's a fun place where we celebrate our differences and come together to have
+        good time.
+      </p>
+    </div>
+  </div>
+
+  <div id="modall-member7" class="modall modall-right">
+    <div class="modall-content">
+      <span class="close" onclick="hideModal('modall-member7')">&times;</span>
+      <h2 id="modall-name-member7">Akriti Sohane</h2>
+      <p id="modall-role-member7">Secretary</p>
+      <h3 class="social-heading">Connect with us</h3>
+      <a id="modall-instagram-member7" class="fa fa-instagram social-link"
+        href="https://www.instagram.com/akritissss/">Intagram</a>
+      <a id="modall-linkedin-member7" class="fa fa-linkedin social-link"
+        href="https://www.linkedin.com/in/akriti-sohane-0597ab293/">Linkedin</a>
+      <!-- <div class="hand-animation"></div> -->
+      <h3 class="social-heading">About The Navrang</h3>
+      <p id="modall-bio-member7">
+        Navrang Club is a place where you can organize yourself to learn more about India’s Cultural Heritage. For
+        teachers it is a tool to create awareness, develop respect and appreciation towards Indian arts. And also
+        motivate students to undertake action-projects to conserve Indian Cultural traditions.
+      </p>
+    </div>
+  </div>
+
+  <div id="modall-member8" class="modall modall-right">
+    <div class="modall-content">
+      <span class="close" onclick="hideModal('modall-member8')">&times;</span>
+      <h2 id="modall-name-member8">Vaibhavi Dubey</h2>
+      <p id="modall-role-member8">Ex-President</p>
+      <h3 class="social-heading">Connect with us</h3>
+      <a id="modall-instagram-member8" class="fa fa-instagram social-link"
+        href="https://www.instagram.com/vaibhavidubey_18/">Intagram</a>
+      <a id="modall-linkedin-member8" class="fa fa-linkedin social-link"
+        href="https://www.linkedin.com/in/vaibhavi-dubey-737b43233/">Linkedin</a>
+      <!-- <div class="hand-animation"></div> -->
+      <h3 class="social-heading">About The Navrang</h3>
+      <p id="modall-bio-member8">
+        As President of The Navrang Club, I believed it was a vibrant cultural collage of diverse talents and passions.
+        Our club served as a creative hub, fostering unity through a kaleidoscope of artistic expression, from dance and
+        music to literature and cuisine. We celebrated the rich tapestry of cultures within our community, promoting
+        inclusivity and understanding. Through our events and initiatives, we aimed to ignite curiosity, spark dialogue,
+        and cultivate a sense of belonging among our members. The Navrang Club wasn't just a club; it was a colorful
+        mosaic where every hue contributed to the beauty of our collective experience.
+      </p>
+    </div>
+  </div>
+
+  <div id="modall-member9" class="modall modall-right">
+    <div class="modall-content">
+      <span class="close" onclick="hideModal('modall-member9')">&times;</span>
+      <h2 id="modall-name-member9">Vijay Kumar Verma</h2>
+      <p id="modall-role-member9">Creative Head</p>
+      <h3 class="social-heading">Connect with us</h3>
+      <a id="modall-instagram-member9" class="fa fa-instagram social-link"
+        href="https://www.instagram.com/vijay_.1511?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Intagram</a>
+      <!-- <div class="hand-animation"></div> -->
+      <h3 class="social-heading">About The Navrang</h3>
+      <p id="modall-bio-member9">
+        Its a boon to the students of psit who after such a hectic suggestions gets a little bit enjoyment by the events
+        organised by the club.The stakes are still high for the club in the collge and it need more brainstorming, more
+        better ideas and better execution .
+      </p>
+    </div>
+  </div>
+
+  <div id="modall-member10" class="modall modall-right">
+    <div class="modall-content">
+      <span class="close" onclick="hideModal('modall-member10')">&times;</span>
+      <h2 id="modall-name-member10">Rachit Shukla</h2>
+      <p id="modall-role-member10">Promotional Head</p>
+      <h3 class="social-heading">Connect with us</h3>
+      <a id="modall-instagram-member10" class="fa fa-instagram social-link"
+        href="https://www.instagram.com/imrachitshukla?igsh=bTdma2lqdTFtZGxm">Intagram</a>
+      <a id="modall-linkedin-member8" class="fa fa-linkedin social-link"
+        href="https://www.linkedin.com/in/rachit-shukla-39922a2b7">Linkedin</a>
+
+      <a href="https://x.com/imrachitshukla?t=YvIg1fQHhALEPXGsx0qxSg&s=08" class="social-linkk linkedin"
+        target="_blank">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <!-- <a href="https://twitter.com/prakharsri03" class="social-linkk linkedin" target="_blank">
+          <i class="fab fa-github">Github</i> -->
+      <!-- <div class="hand-animation"></div> -->
+      <h3 class="social-heading">About The Navrang</h3>
+      <p id="modall-bio-member10">
+        Joining Navrang, the vibrant cultural club! Immerse me in a world of creativity, diversity, and fun as we
+        celebrate the rich tapestry of cultures within our community. From colorful festivals to lively dance
+        performances, Navrang offers a platform to showcase your talents and explore new horizons. Connect with
+        like-minded individuals who share a passion for music, dance, art, and more.
+
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showMemberInfo(memberId, name, role, bio, instagram, linkedin, twitter, github, image) {
+      var modal = document.getElementById(memberId);
+      var modalName = modal.querySelector(".modall-content #modall-name-" + memberId);
+      var modalRole = modal.querySelector(".modall-content #modall-role-" + memberId);
+      var modalInstagram = modal.querySelector(".modall-content #modall-instagram-" + memberId);
+      var modalLinkedin = modal.querySelector(".modall-content #modall-linkedin-" + memberId);
+      var modalGithub = modal.querySelector(".modall-content #modall-github-" + memberId);
+      var modalBio = modal.querySelector(".modall-content #modall-bio-" + memberId);
+      var modalImage = modal.querySelector("#modal-image");
+
+      modal.style.display = "block";
+      modalName.textContent = name;
+      modalRole.textContent = role;
+      modalInstagram.href = instagram;
+      modalLinkedin.href = linkedin;
+      modalBio.textContent = bio;
+      modalImage.src = image;
+    }
+
+    function closeModalAndEnlarged() {
+      var backgroundOverlay = document.getElementById('backgroundOverlay');
+      var enlargedImageContainer = document.getElementById('enlargedImageContainer');
+      var modals = document.querySelectorAll('.modall');
+
+      backgroundOverlay.style.display = 'none';
+      enlargedImageContainer.style.display = 'none';
+      modals.forEach(function (modal) {
+        modal.style.display = 'none';
+      });
+    }
+
+    function hideModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = "none";
+      closeModalAndEnlarged(); // Close both modal and enlarged image container
+    }
+
+    // Function to hide enlarged image container
+    function hideEnlargedImage() {
+      var backgroundOverlay = document.getElementById('backgroundOverlay');
+      var enlargedImageContainer = document.getElementById('enlargedImageContainer');
+      backgroundOverlay.style.display = 'none';
+      enlargedImageContainer.style.display = 'none';
+    }
+
+    // Close the modal when clicking outside of it
+    window.onclick = function (event) {
+      var backgroundOverlay = document.getElementById('backgroundOverlay');
+      var enlargedImageContainer = document.getElementById('enlargedImageContainer');
+      if (event.target == backgroundOverlay || event.target == enlargedImageContainer) {
+        closeModalAndEnlarged(); // Close both modal and enlarged image container
+      }
+    };
+
+
+    // Add this JavaScript to your existing script or within <script> tags
+
+    // Function to show social icons
+    function showSocialIcons() {
+      var socialIcons = document.querySelector('.social-icons');
+      socialIcons.classList.add('show');
+    }
+
+    // Function to hide social icons
+    function hideSocialIcons() {
+      var socialIcons = document.querySelector('.social-icons');
+      socialIcons.classList.remove('show');
+    }
+
+    // Attach event listeners to show/hide social icons on member hover
+    var members = document.querySelectorAll('.member');
+
+    members.forEach(function (member) {
+      member.addEventListener('mouseenter', showSocialIcons);
+      member.addEventListener('mouseleave', hideSocialIcons);
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var members = document.querySelectorAll('.member img');
+      members.forEach(function (member) {
+        member.addEventListener('click', function () {
+          var name = this.parentElement.querySelector('h3').textContent;
+          var role = this.parentElement.querySelector('p').textContent;
+          var bio = this.parentElement.querySelector('p').textContent; // corrected
+          var image = this.src; // corrected
+          var instagram = ""; // add social media links here
+          var linkedin = ""; // add social media links here
+          var twitter = ""; // add social media links here
+          var github = ""; // add social media links here
+          showMemberInfo(this.parentElement.id, name, role, bio, instagram, linkedin, twitter, github, image); // corrected
+        });
+      });
+    });
+
+  </script>
+
+
+  <section class="video-sectionn">
+    <h2>Featured Video</h2>
+    <div class="video-wrapperr">
+      <video controls>
+        <source src="img/video1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+  <div class="contain">
+    <div class="content">
+
+    </div>
+    <div class="sidebar" id="sticky-sidebar">
+      <!-- Sidebar content -->
+    </div>
+    <script>
+      window.addEventListener('scroll', function () {
+        var sidebar = document.getElementById('sticky-sidebar');
+        var sidebarTop = sidebar.getBoundingClientRect().top;
+
+        if (sidebarTop <= 20) {
+          sidebar.classList.add('sticky');
+        } else {
+          sidebar.classList.remove('sticky');
+        }
+      });
+    </script>
+
+  </div>
+
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <p><strong>Address:</strong> 123 Dancing & Singing Street, City, Country</p>
+        <p><strong>Phone:</strong> +91 7423455234</p>
+        <p><strong>Email:</strong> navrangpsit@gmail.com</p>
+      </div>
+      <form action="https://api.web3forms.com/submit" method="post" class="contact-form">
+        <input type="hidden" name="access_key" value="b6c651a8-eeb6-4e33-9cff-98a044a6ce64">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>About Us</h3>
+          <p>We are a passionate dancing and singing club dedicated to fostering creativity and talent among college
+            students.</p>
+          <div class="contact-links">
+            <a href="https://www.facebook.com/NAVRANG.PSIT/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/navrangclub"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/navrang.psit/" target="_blank"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section contact">
+          <h3>Contact Us</h3>
+          <p><i class="fa fa-map-marker"></i>Pranveer Singh Institute of Technology Kanpur-Agra-Delhi National, NH 19,
+            Kanpur, Uttar Pradesh 209305</p>
+          <p><i class="fa fa-phone"></i> +91 9569912921</p>
+          <p><i class="fa fa-envelope"></i> navrang.psit@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 The Navrang Club. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
+          Service</a></p>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
