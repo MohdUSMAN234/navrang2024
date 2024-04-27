@@ -563,7 +563,7 @@ body {
 }
 
 .hero {
-  background-image: url('/img/nav66.JPG'); /* Replace 'hero-background.jpg' with your actual image file */
+  background-image: url('img/nav66.JPG'); /* Replace 'hero-background.jpg' with your actual image file */
   background-size: cover;
   background-position: center;
   height: 100vh; /* Adjust the height as needed */
